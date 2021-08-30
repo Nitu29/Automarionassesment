@@ -35,6 +35,10 @@ public class Payment {
     WebElement cvvvalue;
     @FindBy(xpath= "//a[@class='button-main-content']")
     WebElement paynowbutton;
+    @FindBy(xpath = "//input[@type='password']")
+    WebElement passwordtext;
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-success']")
+    WebElement okbutton;
 
     public void clickoncredeitdebitcardoption()
     {
@@ -70,6 +74,20 @@ public class Payment {
         Baseclass.holdExecutionForSeconds(5);
         paynowbutton.click();
         Baseclass.holdExecutionForSeconds(5);
+        driver.switchTo().frame(0);
     }
+    public void enterpasswordtext()
+    {
+        passwordtext.click();
+        Baseclass.holdExecutionForSeconds(5);
+        passwordtext.sendKeys("112233");
+        Baseclass.holdExecutionForSeconds(5);
+    }
+    public void clickonokbutton()
+    {
+        okbutton.click();
+        Baseclass.holdExecutionForSeconds(10);
+    }
+
 
 }

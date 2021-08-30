@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Finalproject]">
+  <test thread-count="5" verbose="0" name="Midtranweb test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.midtrans.Testcases.Testcasesformidtran">
+        <methods>
+          <include name="verifybuynowbuttonfunctionality"/>
+        </methods>
+      </class> <!-- com.midtrans.Testcases.Testcasesformidtran -->
+    </classes>
+  </test> <!-- Midtranweb test(failed) -->
+</suite> <!-- Failed suite [Finalproject] -->

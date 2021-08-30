@@ -4,6 +4,11 @@
 
     <test name="Midtranweb test">
         <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
             <classes>
                 <class name="com.midtrans.Testcases.Testcasesformidtran" />
             </classes>

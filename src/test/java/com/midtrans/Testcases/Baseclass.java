@@ -21,7 +21,7 @@ public class Baseclass {
     }
 
     @Parameters("browser")
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setup(String br)
     {
         if(br.equals("chrome")) {

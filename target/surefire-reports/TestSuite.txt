@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 79.779 sec - in TestSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.449 sec <<< FAILURE! - in TestSuite
+verifybuynowbuttonfunctionality(com.midtrans.Testcases.Testcasesformidtran)  Time elapsed: 5.2 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at com.midtrans.pageObject.Homepage.clickonBuynowbutton(Homepage.java:24)
+	at com.midtrans.Testcases.Testcasesformidtran.verifybuynowbuttonfunctionality(Testcasesformidtran.java:25)
+
