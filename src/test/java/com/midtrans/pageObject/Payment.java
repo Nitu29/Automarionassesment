@@ -27,13 +27,13 @@ public class Payment {
     WebElement uncheckcouponbutton;
     @FindBy(xpath = "//label[contains(text(),'Potongan 10% - Demo Promo Engine')]")
     WebElement checkcouponbutton;
-    @FindBy(xpath = "//*[@id=\"application\"]/div[3]/div/div/div/form/div[2]/div[1]/input")
+    @FindBy(xpath = "//input[@name= 'cardnumber']")
     WebElement cardnumber;
-    @FindBy(xpath = "//*[@id=\"application\"]/div[3]/div/div/div/form/div[2]/div[2]/input")
+    @FindBy(xpath = "//input[@placeholder= 'MM / YY']")
     WebElement Expirydate;
-    @FindBy(xpath = "//*[@id=\"application\"]/div[3]/div/div/div/form/div[2]/div[3]/input")
+    @FindBy(xpath = "//input[@placeholder= '123']")
     WebElement cvvvalue;
-    @FindBy(xpath= "//div[@class='button-main-content']")
+    @FindBy(xpath= "//a[@class='button-main-content']")
     WebElement paynowbutton;
 
     public void clickoncredeitdebitcardoption()
@@ -62,9 +62,9 @@ public class Payment {
 //    }
     public void entercarddetails()
     {
-        cardnumber.sendKeys("4811 1111 1111 114");
+        cardnumber.sendKeys("4811 1111 1111 1114");
         Baseclass.holdExecutionForSeconds(5);
-        cardnumber.sendKeys("0222");
+        Expirydate.sendKeys("0222");
         Baseclass.holdExecutionForSeconds(5);
         cvvvalue.sendKeys("123");
         Baseclass.holdExecutionForSeconds(5);
