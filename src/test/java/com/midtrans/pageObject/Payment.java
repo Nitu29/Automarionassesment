@@ -1,5 +1,6 @@
 package com.midtrans.pageObject;
 
+import com.midtrans.Testcases.Baseclass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -26,11 +27,18 @@ public class Payment {
     WebElement uncheckcouponbutton;
     @FindBy(xpath = "//label[contains(text(),'Potongan 10% - Demo Promo Engine')]")
     WebElement checkcouponbutton;
+    @FindBy(xpath = "//*[@id=\"application\"]/div[3]/div/div/div/form/div[2]/div[1]/input")
+    WebElement cardnumber;
+    @FindBy(xpath = "//*[@id=\"application\"]/div[3]/div/div/div/form/div[2]/div[2]/input")
+    WebElement Expirydate;
+    @FindBy(xpath = "//*[@id=\"application\"]/div[3]/div/div/div/form/div[2]/div[3]/input")
+    WebElement cvvvalue;
+    @FindBy(xpath= "//div[@class='button-main-content']")
+    WebElement paynowbutton;
 
     public void clickoncredeitdebitcardoption()
     {
         paymentoptions.click();
-
     }
 
     public void uncheckcoupon()
@@ -52,10 +60,15 @@ public class Payment {
 //        Thread.sleep(3000);
 //        System.out.println("Scrolled up..");
 //    }
-
-    public void  entercarddetails()
+    public void entercarddetails()
     {
-
+        cardnumber.sendKeys("4811 1111 1111 114");
+        Baseclass.holdExecutionForSeconds(5);
+        cardnumber.sendKeys("0222");
+        Baseclass.holdExecutionForSeconds(5);
+        cvvvalue.sendKeys("123");
+        Baseclass.holdExecutionForSeconds(5);
+        paynowbutton.click();
     }
 
 }
