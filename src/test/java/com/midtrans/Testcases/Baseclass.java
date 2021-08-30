@@ -31,7 +31,7 @@ public class Baseclass {
         }
         else if (br.equals("firefox"))
         {
-            System.setProperty("webdriver.chrome.driver", readConfig.getgeckodriverpath());
+            System.setProperty("webdriver.gecko.driver", readConfig.getgeckodriverpath());
             driver = new FirefoxDriver();
             driver.manage().window().maximize();
         }
@@ -49,6 +49,7 @@ public class Baseclass {
     @AfterClass
     public void tearDown()
     {
-        driver.quit();
+        //driver.quit();
+        this.driver.quit();
     }
 }

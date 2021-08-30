@@ -86,7 +86,6 @@ public class Payment {
     public void clickonokbutton()
     {
         okbutton.click();
-        Baseclass.holdExecutionForSeconds(10);
     }
 
 
