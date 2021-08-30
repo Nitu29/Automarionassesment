@@ -15,8 +15,6 @@ public class Homepage{
     }
     @FindBy(xpath = "//a[normalize-space()='BUY NOW']")
     WebElement Buynowbutton;
-//    @FindBy(xpath = "//div[@class='cart-content buying']")
-//    WebElement cartbuying;
 
     public void clickonBuynowbutton()
     {

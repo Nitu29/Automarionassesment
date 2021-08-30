@@ -1,6 +1,7 @@
 package com.midtrans.pageObject;
 
 import com.midtrans.Testcases.Baseclass;
+import com.midtrans.utilities.ReadConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +15,7 @@ import java.util.List;
 
 public class Payment {
     WebDriver driver;
+    ReadConfig readConfig = new ReadConfig();
     public Payment(WebDriver driver)
     {
         this.driver = driver;
@@ -66,23 +68,24 @@ public class Payment {
 //    }
     public void entercarddetails()
     {
-        cardnumber.sendKeys("4811 1111 1111 1114");
-        Baseclass.holdExecutionForSeconds(5);
-        Expirydate.sendKeys("0222");
-        Baseclass.holdExecutionForSeconds(5);
-        cvvvalue.sendKeys("123");
-        Baseclass.holdExecutionForSeconds(5);
+        cardnumber.sendKeys(readConfig.Cardnumber());
+        Baseclass.holdExecutionForSeconds(2);
+        Expirydate.sendKeys(readConfig.Expirydate());
+        Baseclass.holdExecutionForSeconds(2);
+        cvvvalue.sendKeys(readConfig.cvvnumber());
+        Baseclass.holdExecutionForSeconds(2);
         paynowbutton.click();
-        Baseclass.holdExecutionForSeconds(5);
+        Baseclass.holdExecutionForSeconds(2);
         driver.switchTo().frame(0);
     }
-    public void enterpasswordtext()
+    public void entervalidpasswordtext()
     {
         passwordtext.click();
-        Baseclass.holdExecutionForSeconds(5);
-        passwordtext.sendKeys("112233");
-        Baseclass.holdExecutionForSeconds(5);
+        Baseclass.holdExecutionForSeconds(2);
+        passwordtext.sendKeys(readConfig.passwordtext());
+        Baseclass.holdExecutionForSeconds(2);
     }
+
     public void clickonokbutton()
     {
         okbutton.click();

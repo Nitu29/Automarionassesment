@@ -6,7 +6,7 @@
         <parameter name="browser" value="chrome"/>
         <groups>
             <run>
-                <include name="Smoke"></include>
+                <include name="Regression"></include>
             </run>
         </groups>
             <classes>

@@ -1,19 +1,21 @@
 package com.midtrans.pageObject;
 
 import com.midtrans.Testcases.Baseclass;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import com.midtrans.utilities.ReadConfig;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
 
-public class Checkoutpage {
+public class Checkoutpage{
     WebDriver ldriver;
-    public Checkoutpage(WebDriver rdriver)
-    {
+    ReadConfig readConfig = new ReadConfig();
+    public Checkoutpage(WebDriver rdriver) throws FileNotFoundException {
         ldriver= rdriver;
         PageFactory.initElements(rdriver, this);
     }
@@ -87,17 +89,17 @@ public class Checkoutpage {
     }
     public void sendthevalueintextfield()
     {
-        Nametextbox.sendKeys("Test1");
+        Nametextbox.sendKeys(readConfig.Shoppingcartname());
         Baseclass.holdExecutionForSeconds(2);
-        Emailtextbox.sendKeys("Test@gmail.com");
+        Emailtextbox.sendKeys(readConfig.ShoppingcartEmail());
         Baseclass.holdExecutionForSeconds(2);
-        Phonenotextbox.sendKeys("0112312");
+        Phonenotextbox.sendKeys(readConfig.Shoppingcartphone());
         Baseclass.holdExecutionForSeconds(2);
-        Citytext.sendKeys("Noida");
+        Citytext.sendKeys(readConfig.Shoppingcartcity());
         Baseclass.holdExecutionForSeconds(2);
-        Addresstext.sendKeys("Testforautomation Delhi Noida");
+        Addresstext.sendKeys(readConfig.Shoppingcartaddress());
         Baseclass.holdExecutionForSeconds(2);
-        PostalCodetext.sendKeys("100091");
+        PostalCodetext.sendKeys(readConfig.Shoppingcartpostal());
         Baseclass.holdExecutionForSeconds(2);
     }
     public void clickoncheckoutbutton()
