@@ -201,7 +201,7 @@ public class Testcasesformidtran extends Baseclass{
         System.out.println("Amount without applying coupon is"+s1+"Amount after applying coupon is"+s2);
     }
     @Test(priority = 15)
-    public void entercarddetails()
+    public void verifythedetailsavailableonbankpaymentpageandentercarddetails()
     {
         Payment payment= new Payment(driver);
         payment.entercarddetails();

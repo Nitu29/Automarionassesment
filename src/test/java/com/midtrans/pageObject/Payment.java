@@ -69,6 +69,7 @@ public class Payment {
         cvvvalue.sendKeys("123");
         Baseclass.holdExecutionForSeconds(5);
         paynowbutton.click();
+        Baseclass.holdExecutionForSeconds(5);
     }
 
 }
