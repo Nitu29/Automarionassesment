@@ -25,4 +25,15 @@ public class Testcasesformidtran extends Baseclass{
         homepage.clickonBuynowbutton();
         Baseclass.holdExecutionForSeconds(2);
     }
+    @Test(priority=2)
+    public void verifynametextfield()
+    {
+        Checkoutpage checkoutpage= new Checkoutpage(driver);
+        Baseclass.holdExecutionForSeconds(2);
+        String S1= checkoutpage.getthevalueenteredinNamefield();
+        System.out.println(S1);
+        Assert.assertEquals(S1,"Budi");
+        System.out.println("Assert is passed");
+        Baseclass.holdExecutionForSeconds(2);
+    }
 }
