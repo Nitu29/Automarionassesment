@@ -36,4 +36,14 @@ public class Testcasesformidtran extends Baseclass{
         System.out.println("Assert is passed");
         Baseclass.holdExecutionForSeconds(2);
     }
+    @Test(priority = 3)
+    public void verifyEmailtextfield()
+    {
+        Checkoutpage checkoutpage= new Checkoutpage(driver);
+        Baseclass.holdExecutionForSeconds(2);
+        String S1=checkoutpage.getthevalueenteredinEmailfield();
+        System.out.println(S1);
+        Assert.assertEquals(S1,"budi@utomo.com");
+        System.out.println("Assert is passed");
+    }
 }
