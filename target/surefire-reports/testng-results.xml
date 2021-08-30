@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="14" passed="14">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Finalproject" duration-ms="78782" started-at="2021-08-29T14:21:28Z" finished-at="2021-08-29T14:22:47Z">
+    <groups>
+    </groups>
+    <test name="Midtranweb test" duration-ms="78782" started-at="2021-08-29T14:21:28Z" finished-at="2021-08-29T14:22:47Z">
+      <class name="com.midtrans.Testcases.Testcasesformidtran">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="setup" is-config="true" duration-ms="5320" started-at="2021-08-29T14:21:28Z" finished-at="2021-08-29T14:21:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifybuynowbuttonfunctionality()[pri:1, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifybuynowbuttonfunctionality" duration-ms="7232" started-at="2021-08-29T14:21:33Z" finished-at="2021-08-29T14:21:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifybuynowbuttonfunctionality -->
+        <test-method status="PASS" signature="verifynametextfield()[pri:2, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifynametextfield" duration-ms="4102" started-at="2021-08-29T14:21:41Z" finished-at="2021-08-29T14:21:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifynametextfield -->
+        <test-method status="PASS" signature="verifyEmailtextfield()[pri:3, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifyEmailtextfield" duration-ms="2072" started-at="2021-08-29T14:21:45Z" finished-at="2021-08-29T14:21:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailtextfield -->
+        <test-method status="PASS" signature="verifyphonenotextfield()[pri:4, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifyphonenotextfield" duration-ms="2073" started-at="2021-08-29T14:21:47Z" finished-at="2021-08-29T14:21:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyphonenotextfield -->
+        <test-method status="PASS" signature="verifycitytextfield()[pri:5, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifycitytextfield" duration-ms="2067" started-at="2021-08-29T14:21:49Z" finished-at="2021-08-29T14:21:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifycitytextfield -->
+        <test-method status="PASS" signature="verifyaddresstextfield()[pri:6, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifyaddresstextfield" duration-ms="2059" started-at="2021-08-29T14:21:51Z" finished-at="2021-08-29T14:21:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyaddresstextfield -->
+        <test-method status="PASS" signature="verifypostalcodetextfield()[pri:7, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifypostalcodetextfield" duration-ms="2071" started-at="2021-08-29T14:21:53Z" finished-at="2021-08-29T14:21:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifypostalcodetextfield -->
+        <test-method status="PASS" signature="verifythetextboxiseditable()[pri:8, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifythetextboxiseditable" duration-ms="29465" started-at="2021-08-29T14:21:55Z" finished-at="2021-08-29T14:22:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifythetextboxiseditable -->
+        <test-method status="PASS" signature="verifycheckoutbuttonfunctionality()[pri:9, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifycheckoutbuttonfunctionality" duration-ms="4206" started-at="2021-08-29T14:22:24Z" finished-at="2021-08-29T14:22:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifycheckoutbuttonfunctionality -->
+        <test-method status="PASS" signature="getproductdetailsonordersummarypage()[pri:10, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="getproductdetailsonordersummarypage" duration-ms="2086" started-at="2021-08-29T14:22:29Z" finished-at="2021-08-29T14:22:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getproductdetailsonordersummarypage -->
+        <test-method status="PASS" signature="verifythefunctionaliyofcontinuebuttn()[pri:11, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifythefunctionaliyofcontinuebuttn" duration-ms="5174" started-at="2021-08-29T14:22:31Z" finished-at="2021-08-29T14:22:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifythefunctionaliyofcontinuebuttn -->
+        <test-method status="PASS" signature="verifythedifferentpaymentvalueonselectpaymentpage()[pri:12, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="verifythedifferentpaymentvalueonselectpaymentpage" duration-ms="656" started-at="2021-08-29T14:22:36Z" finished-at="2021-08-29T14:22:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifythedifferentpaymentvalueonselectpaymentpage -->
+        <test-method status="PASS" signature="clickoncreditdebitcardoption()[pri:13, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="clickoncreditdebitcardoption" duration-ms="152" started-at="2021-08-29T14:22:37Z" finished-at="2021-08-29T14:22:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickoncreditdebitcardoption -->
+        <test-method status="PASS" signature="validateamountafterapplyingcoupon()[pri:14, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="validateamountafterapplyingcoupon" duration-ms="9296" started-at="2021-08-29T14:22:37Z" finished-at="2021-08-29T14:22:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateamountafterapplyingcoupon -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.midtrans.Testcases.Testcasesformidtran@1d251891]" name="tearDown" is-config="true" duration-ms="705" started-at="2021-08-29T14:22:46Z" finished-at="2021-08-29T14:22:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.midtrans.Testcases.Testcasesformidtran -->
+    </test> <!-- Midtranweb test -->
+  </suite> <!-- Finalproject -->
+</testng-results>

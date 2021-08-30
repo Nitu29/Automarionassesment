@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Finalproject">
+
+    <test name="Midtranweb test">
+        <parameter name="browser" value="chrome"/>
+            <classes>
+                <class name="com.midtrans.Testcases.Testcasesformidtran" />
+            </classes>
+    </test>
+</suite>

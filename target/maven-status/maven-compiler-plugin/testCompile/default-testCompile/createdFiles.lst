@@ -1,0 +1,7 @@
+com\midtrans\pageObject\Checkoutpage.class
+com\midtrans\pageObject\Homepage.class
+com\midtrans\Testcases\Testcasesformidtran.class
+com\midtrans\pageObject\Payment.class
+com\midtrans\Testcases\Baseclass.class
+com\midtrans\utilities\ReadConfig.class
+com\midtrans\pageObject\Ordersummary.class
