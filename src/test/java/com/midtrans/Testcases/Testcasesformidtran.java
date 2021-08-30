@@ -58,4 +58,16 @@ public class Testcasesformidtran extends Baseclass{
         Assert.assertEquals(S1,"081808466410");
         System.out.println("Assert is passed");
     }
+    @Test(priority = 5)
+    public void verifycitytextfield()
+    {
+        Checkoutpage checkoutpage= new Checkoutpage(driver);
+        //Homepage homepage= new Homepage(driver);
+        //homepage.clickonBuynowbutton();
+        Baseclass.holdExecutionForSeconds(2);
+        String S1=checkoutpage.getthevalueenteredincityfield();
+        System.out.println(S1);
+        Assert.assertEquals(S1,"Jakarta");
+        System.out.println("Assert is passed");
+    }
 }
