@@ -118,9 +118,7 @@ public class Testcasesformidtran extends Baseclass{
         Baseclass.holdExecutionForSeconds(2);
 
         //By finding all the web elements using iframe tag
-        List<WebElement> iframeElements = driver.findElements(By.tagName("iframeResult"));
-        System.out.println("Total number of iframes are " + ((List<?>) iframeElements).size());
-        driver.switchTo().frame(0);
+
         String s1=driver.findElement(By.xpath("//span[@class=\"text-page-title\"]")).getText();
         System.out.println(s1);
         Assert.assertEquals(s1,"Order Summary");
@@ -233,7 +231,7 @@ public class Testcasesformidtran extends Baseclass{
         holdExecutionForSeconds(2);
         Checkoutpage checkoutpage= new Checkoutpage(driver);
         checkoutpage.clickoncheckoutbutton();
-        Baseclass.holdExecutionForSeconds(2);
+        Baseclass.holdExecutionForSeconds(5);
         Ordersummary ordersummary= new Ordersummary(driver);
         ordersummary.clickoncontinuebutton();
         Baseclass.holdExecutionForSeconds(2);
@@ -245,11 +243,13 @@ public class Testcasesformidtran extends Baseclass{
         payment.enterinvalicpasswordtext();
         Baseclass.holdExecutionForSeconds(2);
         payment.clickonokbutton();
+        Baseclass.holdExecutionForSeconds(2);
         String s1= driver.findElement(By.xpath("//div[@class='text-failed']")).getText();
         System.out.println(s1);
         Assert.assertEquals(s1,"Transaction failed");
         System.out.println("Assert is passed-: Transaction failed");
         Baseclass.holdExecutionForSeconds(2);
         payment.cancelbutton1();
+        driver.switchTo().defaultContent();
     }
 }

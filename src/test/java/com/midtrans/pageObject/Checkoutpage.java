@@ -2,6 +2,7 @@ package com.midtrans.pageObject;
 
 import com.midtrans.Testcases.Baseclass;
 import com.midtrans.utilities.ReadConfig;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.Properties;
 
 public class Checkoutpage{
@@ -106,7 +108,8 @@ public class Checkoutpage{
     public void clickoncheckoutbutton()
     {
         Checkoutbutton.click();
-
-
+        List<WebElement> iframeElements = driver.findElements(By.tagName("iframeResult"));
+        System.out.println("Total number of iframes are " + ((List<?>) iframeElements).size());
+        driver.switchTo().frame(0);
     }
 }
