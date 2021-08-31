@@ -225,16 +225,31 @@ public class Testcasesformidtran extends Baseclass{
         Assert.assertEquals(S1,"Thank you for your purchase.");
         System.out.println("Assert is passed-: Order placed successfully");
     }
-//    @Test(priority = 17, groups = {"Regression"})
-//    public void verifyclickingonokbuttonwithinvaidoutput()
-//    {
-//        Payment payment= new Payment(driver);
-//        payment.enterinvalicpasswordtext();
-//        Baseclass.holdExecutionForSeconds(2);
-//        payment.clickonokbutton();
-//        String s1= driver.findElement(By.xpath("//div[@class='text-failed']")).getText();
-//        System.out.println(s1);
-//        Assert.assertEquals(s1,"Transaction failed");
-//        System.out.println("Assert is passed-: Transaction failed");
-//    }
+    @Test(priority = 17, groups = {"Regression"})
+    public void verifyclickingonokbuttonwithinvaidoutput()
+    {
+        Homepage homepage= new Homepage(driver);
+        homepage.clickonBuynowbutton();
+        holdExecutionForSeconds(2);
+        Checkoutpage checkoutpage= new Checkoutpage(driver);
+        checkoutpage.clickoncheckoutbutton();
+        Baseclass.holdExecutionForSeconds(2);
+        Ordersummary ordersummary= new Ordersummary(driver);
+        ordersummary.clickoncontinuebutton();
+        Baseclass.holdExecutionForSeconds(2);
+        Payment payment= new Payment(driver);
+        payment.clickoncredeitdebitcardoption();
+        Baseclass.holdExecutionForSeconds(2);
+        payment.entercarddetails();
+        Baseclass.holdExecutionForSeconds(2);
+        payment.enterinvalicpasswordtext();
+        Baseclass.holdExecutionForSeconds(2);
+        payment.clickonokbutton();
+        String s1= driver.findElement(By.xpath("//div[@class='text-failed']")).getText();
+        System.out.println(s1);
+        Assert.assertEquals(s1,"Transaction failed");
+        System.out.println("Assert is passed-: Transaction failed");
+        Baseclass.holdExecutionForSeconds(2);
+        payment.cancelbutton1();
+    }
 }

@@ -41,6 +41,8 @@ public class Payment {
     WebElement passwordtext;
     @FindBy(xpath = "//button[@class='btn btn-sm btn-success']")
     WebElement okbutton;
+    @FindBy(xpath="//a[@class='header-back']")
+    WebElement cancelbutton;
 
     public void clickoncredeitdebitcardoption()
     {
@@ -97,6 +99,10 @@ public class Payment {
     public void clickonokbutton()
     {
         okbutton.click();
+    }
+    public void cancelbutton1()
+    {
+        cancelbutton.click();
     }
 
 
