@@ -13,12 +13,13 @@ import java.io.FileNotFoundException;
 import java.util.Properties;
 
 public class Checkoutpage{
-    WebDriver ldriver;
-    ReadConfig readConfig = new ReadConfig();
-    public Checkoutpage(WebDriver rdriver) throws FileNotFoundException {
-        ldriver= rdriver;
-        PageFactory.initElements(rdriver, this);
+    WebDriver driver;
+    public Checkoutpage(WebDriver driver)
+    {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
+    ReadConfig readConfig = new ReadConfig();
     @FindBy(xpath = "//input[@value='Budi']")
     WebElement Nametextbox;
     @FindBy(xpath = "//input[@value='budi@utomo.com']")

@@ -85,6 +85,14 @@ public class Payment {
         passwordtext.sendKeys(readConfig.passwordtext());
         Baseclass.holdExecutionForSeconds(2);
     }
+    public void enterinvalicpasswordtext()
+    {
+        passwordtext.click();
+        Baseclass.holdExecutionForSeconds(2);
+        passwordtext.sendKeys(readConfig.passwordtext1());
+        Baseclass.holdExecutionForSeconds(2);
+
+    }
 
     public void clickonokbutton()
     {

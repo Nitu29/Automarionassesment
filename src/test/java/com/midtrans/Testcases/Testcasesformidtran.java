@@ -211,30 +211,30 @@ public class Testcasesformidtran extends Baseclass{
         payment.entercarddetails();
         Baseclass.holdExecutionForSeconds(2);
     }
-//    @Test(priority = 16, groups = {"Regression", "Smoke"})
-//    public void verifythefuctionalitytoclickonokbuttonwithvalidpassword()
-//    {
-//        Payment payment= new Payment(driver);
-//        payment.enterpasswordtext();
-//        Baseclass.holdExecutionForSeconds(5);
-//        payment.clickonokbutton();
-//        WebDriverWait wait = new WebDriverWait(driver,20);
-//        WebElement element= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Thank you for your purchase.']")));
-//        String S1= driver.findElement(By.xpath("//span[normalize-space()='Thank you for your purchase.']")).getText();
-//        System.out.println(S1);
-//        Assert.assertEquals(S1,"Thank you for your purchase.");
-//        System.out.println("Assert is passed-: Order placed successfully");
-//    }
-    @Test(priority = 17, groups = {"Regression"})
-    public void verifyclickingonokbuttonwithinvaidoutput()
+    @Test(priority = 16, groups = {"Regression", "Smoke"})
+    public void verifythefuctionalitytoclickonokbuttonwithvalidpassword()
     {
         Payment payment= new Payment(driver);
-        payment.enterpasswordtext();
-        Baseclass.holdExecutionForSeconds(2);
+        payment.entervalidpasswordtext();
+        Baseclass.holdExecutionForSeconds(5);
         payment.clickonokbutton();
-        String s1= driver.findElement(By.xpath("//div[@class='text-failed']")).getText();
-        System.out.println(s1);
-        Assert.assertEquals(s1,"Transaction failed");
-        System.out.println("Assert is passed-: Transaction failed");
+        WebDriverWait wait = new WebDriverWait(driver,20);
+        WebElement element= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Thank you for your purchase.']")));
+        String S1= driver.findElement(By.xpath("//span[normalize-space()='Thank you for your purchase.']")).getText();
+        System.out.println(S1);
+        Assert.assertEquals(S1,"Thank you for your purchase.");
+        System.out.println("Assert is passed-: Order placed successfully");
     }
+//    @Test(priority = 17, groups = {"Regression"})
+//    public void verifyclickingonokbuttonwithinvaidoutput()
+//    {
+//        Payment payment= new Payment(driver);
+//        payment.enterinvalicpasswordtext();
+//        Baseclass.holdExecutionForSeconds(2);
+//        payment.clickonokbutton();
+//        String s1= driver.findElement(By.xpath("//div[@class='text-failed']")).getText();
+//        System.out.println(s1);
+//        Assert.assertEquals(s1,"Transaction failed");
+//        System.out.println("Assert is passed-: Transaction failed");
+//    }
 }
