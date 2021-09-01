@@ -244,10 +244,7 @@ public class Testcasesformidtran extends Baseclass{
         Baseclass.holdExecutionForSeconds(2);
         payment.clickonokbutton();
         Baseclass.holdExecutionForSeconds(2);
-        String s1= driver.findElement(By.xpath("//div[@class='text-failed']")).getText();
-        System.out.println(s1);
-        Assert.assertEquals(s1,"Transaction failed");
-        System.out.println("Assert is passed-: Transaction failed");
+        driver.switchTo().frame(0);
         Baseclass.holdExecutionForSeconds(2);
         payment.cancelbutton1();
         driver.switchTo().defaultContent();

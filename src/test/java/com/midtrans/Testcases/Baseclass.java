@@ -49,7 +49,7 @@ public class Baseclass {
     @AfterClass
     public void tearDown()
     {
-        //driver.quit();
-        this.driver.quit();
+        driver.quit();
+        //this.driver.quit();
     }
 }

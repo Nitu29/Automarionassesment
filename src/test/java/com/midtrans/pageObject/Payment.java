@@ -41,7 +41,7 @@ public class Payment {
     WebElement passwordtext;
     @FindBy(xpath = "//button[@class='btn btn-sm btn-success']")
     WebElement okbutton;
-    @FindBy(xpath="//a[@class='header-back']")
+    @FindBy(xpath="//*[@id='header']/a/span")
     WebElement cancelbutton;
 
     public void clickoncredeitdebitcardoption()
@@ -82,8 +82,8 @@ public class Payment {
     }
     public void entervalidpasswordtext()
     {
-        passwordtext.click();
-        Baseclass.holdExecutionForSeconds(2);
+//        passwordtext.click();
+//        Baseclass.holdExecutionForSeconds(2);
         passwordtext.sendKeys(readConfig.passwordtext());
         Baseclass.holdExecutionForSeconds(2);
     }
@@ -103,6 +103,8 @@ public class Payment {
     public void cancelbutton1()
     {
         cancelbutton.click();
+        Baseclass.holdExecutionForSeconds(2);
+        driver.switchTo().defaultContent();
     }
 
 

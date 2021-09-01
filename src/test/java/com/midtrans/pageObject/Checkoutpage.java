@@ -111,5 +111,6 @@ public class Checkoutpage{
         List<WebElement> iframeElements = driver.findElements(By.tagName("iframeResult"));
         System.out.println("Total number of iframes are " + ((List<?>) iframeElements).size());
         driver.switchTo().frame(0);
+        Baseclass.holdExecutionForSeconds(5);
     }
 }
